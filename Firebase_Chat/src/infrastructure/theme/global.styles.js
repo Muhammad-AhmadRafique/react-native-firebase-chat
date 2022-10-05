@@ -23,3 +23,15 @@ export const SuezHeading = styled(Text)`
   font-size: 41px;
   font-weight: 400;
 `;
+
+export const BlueLabel = styled(Text)`
+  color: ${props => props.theme.colors.ui.blue};
+`;
+
+export const LightBlueLabel = styled(Text)`
+  color: ${props => props.theme.colors.ui.lightBlue};
+`;
+
+export const BlackLabel = styled(Text)`
+  color: ${props => props.theme.colors.ui.black};
+`;

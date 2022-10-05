@@ -7,14 +7,18 @@
  */
 
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {fonts} from './src/infrastructure/theme/fonts';
-
+import {ThemeProvider} from 'styled-components';
+import {theme} from './src/infrastructure/theme';
+import Routes from './src/navigators/routes';
 export default function App() {
   return (
-    <View style={styles.mainContainer}>
-      <Text style={styles.text}>Hello World</Text>
-    </View>
+    <>
+      <ThemeProvider theme={theme}>
+        <Routes />
+      </ThemeProvider>
+    </>
   );
 }
 
