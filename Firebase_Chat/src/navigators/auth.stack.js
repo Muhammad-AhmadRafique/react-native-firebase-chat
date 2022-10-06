@@ -4,6 +4,7 @@ import LoginScreen from '../features/authentication/Auth/screens/login.screen.js
 import SignupScreen from '../features/authentication/Auth/screens/signup.screen.js/signup.screen';
 import {NavigationKeys} from '../utilities/constants/constants';
 import ForgotPasswordScreen from '../features/authentication/Auth/screens/forgot.password.screen.js/forgot.password.screen';
+import SplashScreen from '../features/authentication/Auth/screens/splash.screen';
 
 const Stack = createStackNavigator();
 
@@ -13,6 +14,7 @@ function AuthStack(props) {
       screenOptions={{
         headerShown: false,
       }}>
+      <Stack.Screen name={NavigationKeys.SPLASH} component={SplashScreen} />
       <Stack.Screen name={NavigationKeys.LOGIN} component={LoginScreen} />
       <Stack.Screen
         name={NavigationKeys.FORGET_PASSWORD}

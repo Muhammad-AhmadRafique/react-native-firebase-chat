@@ -8,6 +8,7 @@ export const Images = {
   google: require('../../../assets/images/google.png'),
   facebook: require('../../../assets/images/facebook.png'),
   apple: require('../../../assets/images/apple.png'),
+  chat: require('../../../assets/images/chat_icon.png'),
   //   splash1: require('../../../assets/images/splash_char1.png'),
   //   splash2: require('../../../assets/images/splash_char2.png'),
   //   splashMain: require('../../../assets/images/splash_char.png'),
@@ -18,6 +19,7 @@ export const Images = {
 };
 
 export const NavigationKeys = {
+  SPLASH: 'splash',
   ON_BOARDING: 'onBoarding',
   LOGIN: 'login',
   SIGNUP: 'signup',
