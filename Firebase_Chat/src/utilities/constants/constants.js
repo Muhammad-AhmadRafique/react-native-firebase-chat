@@ -16,3 +16,14 @@ export const Images = {
   //   check: require('../../../assets/images/check.png'),
   //   unCheck: require('../../../assets/images/uncheck.png'),
 };
+
+export const NavigationKeys = {
+  ON_BOARDING: 'onBoarding',
+  LOGIN: 'login',
+  SIGNUP: 'signup',
+  FORGET_PASSWORD: 'forgetPassword',
+  ON_BOARDING1: 'onboarding1',
+  ON_BOARDING2: 'onboarding2',
+  ON_BOARDING3: 'onboarding3',
+  DASHBOARD: 'DashboardTabs',
+};

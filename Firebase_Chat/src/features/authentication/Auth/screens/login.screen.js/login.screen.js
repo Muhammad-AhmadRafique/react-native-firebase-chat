@@ -20,7 +20,10 @@ import {
 import BlueBorderedButton from '../../../../../utilities/components/blue.bordered.button';
 import BlueGradientButton from '../../../../../utilities/components/blue.gradient.button';
 import {Spacer} from '../../../../../utilities/components/spacer.component';
-import {Images} from '../../../../../utilities/constants/constants';
+import {
+  Images,
+  NavigationKeys,
+} from '../../../../../utilities/constants/constants';
 
 const width = Dimensions.get('screen').width;
 
@@ -31,6 +34,8 @@ const ForgotPasswordButton = styled(Text)`
 `;
 
 function LoginScreen(props) {
+  const {navigation} = props;
+
   const [email, onChangeEmail] = useState('');
   const [password, onChangePasswrod] = useState('');
 
@@ -46,11 +51,15 @@ function LoginScreen(props) {
         <Spacer position="bottom" size="small" />
         <BlackLabel style={styles.subTitle}>Sign in and get started</BlackLabel>
       </View>
-      <Spacer position="bottom" size="veryLarge" />
-      <Spacer position="bottom" size="veryLarge" />
+
+      <Spacer position="bottom" size="small" />
+
       <ScrollView>
+        <Spacer position="bottom" size="veryLarge" />
+        <Spacer position="bottom" size="large" />
         <View style={styles.mainContainer}>
           <TextInput
+            theme={{roundness: 23}}
             label="Email"
             activeOutlineColor={colors.ui.blue}
             outlineColor={colors.ui.lightGrayTextfield}
@@ -60,6 +69,7 @@ function LoginScreen(props) {
           />
           <Spacer position="bottom" size="large" />
           <TextInput
+            theme={{roundness: 23}}
             label="Password"
             activeOutlineColor={colors.ui.blue}
             outlineColor={colors.ui.lightGrayTextfield}
@@ -77,13 +87,15 @@ function LoginScreen(props) {
               }}
             />
           </View>
-          {/* <Spacer position="bottom" size="large" /> */}
-          <TouchableOpacity style={styles.forgotPasswordContainer}>
+          <TouchableOpacity
+            style={styles.forgotPasswordContainer}
+            onPress={() => {
+              navigation.push(NavigationKeys.FORGET_PASSWORD);
+            }}>
             <ForgotPasswordButton>Forgot Password?</ForgotPasswordButton>
           </TouchableOpacity>
 
           <Spacer position="bottom" size="veryLarge" />
-          {/* <Spacer position="bottom" size="large" /> */}
 
           <View style={styles.socialMediaContainer}>
             <TouchableOpacity
@@ -123,6 +135,7 @@ function LoginScreen(props) {
               height={45}
               onPressed={() => {
                 console.log('pressed');
+                navigation.push(NavigationKeys.SIGNUP);
               }}
             />
           </View>
@@ -162,6 +175,8 @@ const styles = StyleSheet.create({
     height: 45,
     marginLeft: 30,
     marginRight: 30,
+    paddingLeft: 8,
+    paddingRight: 8,
     borderRadius: 20,
     backgroundColor: colors.ui.white,
   },
