@@ -1,21 +1,18 @@
 import React, {Component} from 'react';
-import {AppRegistry, StyleSheet, Text, View} from 'react-native';
+import {AppRegistry, StyleSheet} from 'react-native';
 
 import Swiper from 'react-native-swiper';
+import Tutorial1Screen from './tutorial1.screen';
+import Tutorial2Screen from './tutorial2.screen';
+import Tutorial3Screen from './tutorial3.screen';
 
 export default class SwiperComponent extends Component {
   render() {
     return (
-      <Swiper style={styles.wrapper} showsButtons={true}>
-        <View style={styles.slide1}>
-          <Text style={styles.text}>Hello Swiper</Text>
-        </View>
-        <View style={styles.slide2}>
-          <Text style={styles.text}>Beautiful</Text>
-        </View>
-        <View style={styles.slide3}>
-          <Text style={styles.text}>And simple</Text>
-        </View>
+      <Swiper style={styles.wrapper} showsButtons={false}>
+        <Tutorial1Screen />
+        <Tutorial2Screen />
+        <Tutorial3Screen />
       </Swiper>
     );
   }
@@ -47,3 +44,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
 });
+
+AppRegistry.registerComponent('myproject', () => SwiperComponent);
