@@ -20,7 +20,7 @@ export const Images = {
 
 export const NavigationKeys = {
   SPLASH: 'splash',
-  ON_BOARDING: 'onBoarding',
+  TUTORIAL: 'tutorial',
   LOGIN: 'login',
   SIGNUP: 'signup',
   FORGET_PASSWORD: 'forgetPassword',

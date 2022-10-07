@@ -17,7 +17,8 @@ function SplashScreen(props) {
 
   useEffect(() => {
     setTimeout(() => {
-      navigation.replace(NavigationKeys.LOGIN);
+      // navigation.replace(NavigationKeys.LOGIN);
+      navigation.replace(NavigationKeys.TUTORIAL);
     }, 10000);
   }, []);
 
