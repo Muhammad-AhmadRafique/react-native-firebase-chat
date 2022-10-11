@@ -1,47 +1,84 @@
-import React, {Component} from 'react';
-import {AppRegistry, StyleSheet} from 'react-native';
+import React, {Component, useRef, useState} from 'react';
+import {
+  AppRegistry,
+  Dimensions,
+  SafeAreaView,
+  StyleSheet,
+  View,
+} from 'react-native';
 
 import Swiper from 'react-native-swiper';
+import {colors} from '../../../infrastructure/theme/colors';
+import BlueBorderedButton from '../../../utilities/components/blue.bordered.button';
+import BlueBorderedWhiteBGButton from '../../../utilities/components/blue.bordered.white.bg.button';
+import BlueGradientButton from '../../../utilities/components/blue.gradient.button';
+import {Spacer} from '../../../utilities/components/spacer.component';
+import {NavigationKeys} from '../../../utilities/constants/constants';
 import Tutorial1Screen from './tutorial1.screen';
 import Tutorial2Screen from './tutorial2.screen';
 import Tutorial3Screen from './tutorial3.screen';
 
-export default class SwiperComponent extends Component {
-  render() {
-    return (
-      <Swiper style={styles.wrapper} showsButtons={false}>
-        <Tutorial1Screen />
-        <Tutorial2Screen />
-        <Tutorial3Screen />
+const width = Dimensions.get('screen').width;
+
+export default SwiperComponent = props => {
+  const {navigation} = props;
+
+  return (
+    <SafeAreaView style={{flex: 1}}>
+      <Swiper
+        style={styles.swiper}
+        activeDotColor={colors.ui.blue}
+        loop={false}>
+        <View style={styles.slide}>
+          <Tutorial1Screen />
+        </View>
+        <View style={styles.slide}>
+          <Tutorial2Screen />
+        </View>
+        <View style={styles.slide}>
+          <Tutorial3Screen />
+        </View>
       </Swiper>
-    );
-  }
-}
+
+      <View style={styles.buttonContainer}>
+        <BlueGradientButton
+          title="Sign Up"
+          width={width - 100}
+          height={45}
+          onPressed={() => {
+            navigation.replace(NavigationKeys.SIGNUP);
+          }}
+        />
+        <Spacer position="bottom" size="large" />
+        <BlueBorderedWhiteBGButton
+          title="Sign In"
+          width={width - 100}
+          height={45}
+          onPressed={() => {
+            navigation.replace(NavigationKeys.LOGIN);
+          }}
+        />
+      </View>
+    </SafeAreaView>
+  );
+};
 
 const styles = StyleSheet.create({
-  wrapper: {},
-  slide1: {
+  mainContainer: {
     flex: 1,
+  },
+  swiper: {
+    marginTop: 100,
+  },
+  slide: {
+    flex: 0.8,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#9DD6EB',
   },
-  slide2: {
-    flex: 1,
-    justifyContent: 'center',
+  buttonContainer: {
+    flex: 0.2,
     alignItems: 'center',
-    backgroundColor: '#97CAE5',
-  },
-  slide3: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#92BBD9',
-  },
-  text: {
-    color: '#fff',
-    fontSize: 30,
-    fontWeight: 'bold',
+    height: 150,
   },
 });
 

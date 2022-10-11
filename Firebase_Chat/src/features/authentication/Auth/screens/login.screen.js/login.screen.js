@@ -71,6 +71,7 @@ function LoginScreen(props) {
           <TextInput
             theme={{roundness: 23}}
             label="Password"
+            secureTextEntry={true}
             activeOutlineColor={colors.ui.blue}
             outlineColor={colors.ui.lightGrayTextfield}
             mode="outlined"

@@ -32,27 +32,6 @@ function Tutorial1Screen(props) {
 
       <Spacer position="bottom" size="veryLarge" />
       <Spacer position="bottom" size="veryLarge" />
-
-      <View style={styles.buttonContainer}>
-        <BlueGradientButton
-          title="Sign Up"
-          width={width - 100}
-          height={45}
-          onPressed={() => {
-            console.log('pressed');
-          }}
-        />
-        <Spacer position="bottom" size="large" />
-        <BlueBorderedButton
-          title="Sign In"
-          width={width - 100}
-          height={45}
-          onPressed={() => {
-            console.log('pressed');
-            navigation.pop();
-          }}
-        />
-      </View>
     </View>
   );
 }
@@ -72,7 +51,7 @@ const styles = StyleSheet.create({
   },
   heading: {
     fontSize: 30,
-    fontFamily: fonts.Poppins_Medium,
+    fontFamily: fonts.Poppins_Semibold,
     textAlign: 'left',
   },
   subHeading: {
