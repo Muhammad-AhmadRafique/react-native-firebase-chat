@@ -26,11 +26,14 @@ function SignupScreen(props) {
   const {navigation} = props;
   const [email, onChangeEmail] = useState('');
   const [password, onChangePasswrod] = useState('');
+  const [hidePassword, setHidePassword] = useState(true);
 
   const btnActionGoogleLogin = () => {};
   const loginWithFacebook = () => {};
   const btnActionApple = () => {};
-
+  const passwordHidePressed = () => {
+    setHidePassword(!hidePassword);
+  };
   return (
     <View style={{flex: 1}}>
       <View style={styles.topContainer}>
@@ -89,12 +92,19 @@ function SignupScreen(props) {
           <TextInput
             theme={{roundness: 23}}
             label="Password"
-            secureTextEntry={true}
+            secureTextEntry={hidePassword}
             activeOutlineColor={colors.ui.blue}
             outlineColor={colors.ui.lightGrayTextfield}
             mode="outlined"
             style={styles.input}
             onChangeText={onChangePasswrod}
+            right={
+              <TextInput.Icon
+                icon={Images.eye}
+                outlineColor={colors.ui.black}
+                onPress={passwordHidePressed}
+              />
+            }
           />
           <View style={styles.buttonContainer}>
             <BlueGradientButton

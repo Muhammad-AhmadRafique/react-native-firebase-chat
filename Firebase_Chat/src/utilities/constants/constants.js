@@ -5,6 +5,7 @@ export const Images = {
   //   book: require('../../../assets/images/book_onBoarding.png'),
   //   eye: require('../../../assets/images/eye.png'),
   //   rectangleEmpty: require('../../../assets/images/rectangle.png'),
+  eye: require('../../../assets/images/eye.png'),
   google: require('../../../assets/images/google.png'),
   facebook: require('../../../assets/images/facebook.png'),
   apple: require('../../../assets/images/apple.png'),
