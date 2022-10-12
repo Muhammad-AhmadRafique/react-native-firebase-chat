@@ -156,7 +156,6 @@ function SignupScreen(props) {
               width={width - 60}
               height={45}
               onPressed={() => {
-                console.log('pressed');
                 navigation.pop();
               }}
             />

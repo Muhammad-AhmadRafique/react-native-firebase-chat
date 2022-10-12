@@ -98,6 +98,7 @@ function LoginScreen(props) {
               height={45}
               onPressed={() => {
                 console.log('pressed');
+                navigation.replace('homeStack');
               }}
             />
           </View>

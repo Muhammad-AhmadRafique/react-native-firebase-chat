@@ -23,6 +23,7 @@ export const Images = {
 };
 
 export const NavigationKeys = {
+  Auth: 'Auth',
   SPLASH: 'splash',
   TUTORIAL: 'tutorial',
   LOGIN: 'login',
@@ -31,5 +32,7 @@ export const NavigationKeys = {
   ON_BOARDING1: 'onboarding1',
   ON_BOARDING2: 'onboarding2',
   ON_BOARDING3: 'onboarding3',
-  DASHBOARD: 'DashboardTabs',
+  DASHBOARD: 'Dashboard',
+  HOME_STACK: 'HomeStack',
+  HOME: 'home',
 };
