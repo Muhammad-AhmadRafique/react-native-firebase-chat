@@ -4,7 +4,7 @@ import HomeStack from './home.stack';
 import {Images, NavigationKeys} from '../utilities/constants/constants';
 import {colors} from '../infrastructure/theme/colors';
 import {Image} from 'react-native';
-import HomeScreen from '../features/dashboard/home.screen';
+import HomeScreen from '../features/dashboard/HomeScreen/screens/home.screen';
 
 const Tab = createBottomTabNavigator();
 

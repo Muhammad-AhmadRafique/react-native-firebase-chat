@@ -13,6 +13,11 @@ export const Images = {
   conversation: require('../../../assets/images/conversation.png'),
   message: require('../../../assets/images/message.png'),
   networking: require('../../../assets/images/networking.png'),
+  search: require('../../../assets/images/search.png'),
+  profilePlaceholder: require('../../../assets/images/profile_placeholder.png'),
+  rectanglePlaceholder: require('../../../assets/images/rectangle_placeholder.png'),
+  createThread: require('../../../assets/images/create_thread.png'),
+
   //   splash1: require('../../../assets/images/splash_char1.png'),
   //   splash2: require('../../../assets/images/splash_char2.png'),
   //   splashMain: require('../../../assets/images/splash_char.png'),
