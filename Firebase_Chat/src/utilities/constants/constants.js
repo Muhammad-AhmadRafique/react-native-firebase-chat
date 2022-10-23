@@ -1,3 +1,5 @@
+export const EMAIL_REGEX = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+
 export const Images = {
   /********************* OnBoardingIcons **********************/
   //   characters: require('../../../assets/images/characteres_onBoarding.png'),

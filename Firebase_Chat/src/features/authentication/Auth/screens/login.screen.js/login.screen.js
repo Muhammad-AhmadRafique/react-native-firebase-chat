@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {
+  Alert,
   Button,
   Dimensions,
   Image,
@@ -22,9 +23,11 @@ import BlueBorderedButton from '../../../../../utilities/components/blue.bordere
 import BlueGradientButton from '../../../../../utilities/components/blue.gradient.button';
 import {Spacer} from '../../../../../utilities/components/spacer.component';
 import {
+  EMAIL_REGEX,
   Images,
   NavigationKeys,
 } from '../../../../../utilities/constants/constants';
+import auth from '@react-native-firebase/auth';
 
 const width = Dimensions.get('screen').width;
 
@@ -38,7 +41,7 @@ function LoginScreen(props) {
   const {navigation} = props;
 
   const [email, onChangeEmail] = useState('');
-  const [password, onChangePasswrod] = useState('');
+  const [password, onChangePassword] = useState('');
   const [hidePassword, setHidePassword] = useState(true);
 
   const btnActionGoogleLogin = () => {};
@@ -47,6 +50,38 @@ function LoginScreen(props) {
 
   const passwordHidePressed = () => {
     setHidePassword(!hidePassword);
+  };
+
+  const loginButtonPressed = () => {
+    if (email.size === 0) {
+      Alert.alert('Alert', 'Please enter email');
+      return;
+    }
+    if (EMAIL_REGEX.test(email) === false) {
+      Alert.alert('Alert', 'Please enter valid email');
+      return;
+    }
+    if (password.size === 0) {
+      Alert.alert('Alert', 'Please enter password');
+      return;
+    }
+
+    auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(() => {
+        console.log('User account created & signed in!');
+        navigation.replace('homeStack');
+      })
+      .catch(error => {
+        if (error.code === 'auth/email-already-in-use') {
+          console.log('That email address is already in use!');
+        }
+
+        if (error.code === 'auth/invalid-email') {
+          console.log('That email address is invalid!');
+        }
+        Alert.alert(error.toString());
+      });
   };
 
   return (
@@ -65,6 +100,7 @@ function LoginScreen(props) {
         <Spacer position="bottom" size="large" />
         <View style={styles.mainContainer}>
           <TextInput
+            value={email}
             theme={{roundness: 23}}
             label="Email"
             activeOutlineColor={colors.ui.blue}
@@ -75,6 +111,7 @@ function LoginScreen(props) {
           />
           <Spacer position="bottom" size="large" />
           <TextInput
+            value={password}
             theme={{roundness: 23}}
             label="Password"
             secureTextEntry={hidePassword}
@@ -82,7 +119,7 @@ function LoginScreen(props) {
             outlineColor={colors.ui.lightGrayTextfield}
             mode="outlined"
             style={styles.input}
-            onChangeText={onChangePasswrod}
+            onChangeText={onChangePassword}
             right={
               <TextInput.Icon
                 icon={Images.eye}
@@ -96,10 +133,10 @@ function LoginScreen(props) {
               title="Sign In"
               width={width - 60}
               height={45}
-              onPressed={() => {
-                console.log('pressed');
-                navigation.replace('homeStack');
-              }}
+              onPressed={loginButtonPressed}
+              // console.log('pressed');
+              // navigation.replace('homeStack');
+              // }}
             />
           </View>
           <TouchableOpacity
