@@ -11,9 +11,9 @@ export const RowView = styled(View)`
 `;
 
 export const TopHeading = styled(Text)`
-  font-family: ${props => props.theme.fonts.Poppins_Regular};
-  font-weight: 600;
-  font-size: 24px;
+  font-family: ${props => props.theme.fonts.Poppins_Bold};
+  font-weight: 700;
+  font-size: 20px;
   color: ${props => props.theme.colors.ui.black};
 `;
 

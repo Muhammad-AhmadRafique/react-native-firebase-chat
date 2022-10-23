@@ -19,7 +19,7 @@ function SplashScreen(props) {
     setTimeout(() => {
       // navigation.replace(NavigationKeys.LOGIN);
       navigation.replace(NavigationKeys.TUTORIAL);
-    }, 10000);
+    }, 1000);
   }, []);
 
   return (

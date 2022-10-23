@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {
+  Button,
   Dimensions,
   Image,
   Platform,
@@ -38,10 +39,15 @@ function LoginScreen(props) {
 
   const [email, onChangeEmail] = useState('');
   const [password, onChangePasswrod] = useState('');
+  const [hidePassword, setHidePassword] = useState(true);
 
   const btnActionGoogleLogin = () => {};
   const loginWithFacebook = () => {};
   const btnActionApple = () => {};
+
+  const passwordHidePressed = () => {
+    setHidePassword(!hidePassword);
+  };
 
   return (
     <View style={{flex: 1}}>
@@ -71,11 +77,19 @@ function LoginScreen(props) {
           <TextInput
             theme={{roundness: 23}}
             label="Password"
+            secureTextEntry={hidePassword}
             activeOutlineColor={colors.ui.blue}
             outlineColor={colors.ui.lightGrayTextfield}
             mode="outlined"
             style={styles.input}
             onChangeText={onChangePasswrod}
+            right={
+              <TextInput.Icon
+                icon={Images.eye}
+                outlineColor={colors.ui.black}
+                onPress={passwordHidePressed}
+              />
+            }
           />
           <View style={styles.buttonContainer}>
             <BlueGradientButton
@@ -84,6 +98,7 @@ function LoginScreen(props) {
               height={45}
               onPressed={() => {
                 console.log('pressed');
+                navigation.replace('homeStack');
               }}
             />
           </View>
@@ -148,6 +163,30 @@ function LoginScreen(props) {
 export default LoginScreen;
 
 const styles = StyleSheet.create({
+  searchSection: {
+    // flex: 1,
+    marginLeft: 30,
+    marginRight: 30,
+    borderRadius: 20,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  searchIcon: {
+    padding: 10,
+    height: 10,
+    width: 10,
+  },
+  // input: {
+  //   flex: 1,
+  //   paddingTop: 10,
+  //   paddingRight: 10,
+  //   paddingBottom: 10,
+  //   paddingLeft: 0,
+  //   backgroundColor: '#fff',
+  //   color: '#424242',
+  // },
   topContainer: {
     padding: 30,
     height: 150,

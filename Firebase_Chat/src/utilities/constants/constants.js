@@ -5,6 +5,7 @@ export const Images = {
   //   book: require('../../../assets/images/book_onBoarding.png'),
   //   eye: require('../../../assets/images/eye.png'),
   //   rectangleEmpty: require('../../../assets/images/rectangle.png'),
+  eye: require('../../../assets/images/eye.png'),
   google: require('../../../assets/images/google.png'),
   facebook: require('../../../assets/images/facebook.png'),
   apple: require('../../../assets/images/apple.png'),
@@ -12,6 +13,11 @@ export const Images = {
   conversation: require('../../../assets/images/conversation.png'),
   message: require('../../../assets/images/message.png'),
   networking: require('../../../assets/images/networking.png'),
+  search: require('../../../assets/images/search.png'),
+  profilePlaceholder: require('../../../assets/images/profile_placeholder.png'),
+  rectanglePlaceholder: require('../../../assets/images/rectangle_placeholder.png'),
+  createThread: require('../../../assets/images/create_thread.png'),
+
   //   splash1: require('../../../assets/images/splash_char1.png'),
   //   splash2: require('../../../assets/images/splash_char2.png'),
   //   splashMain: require('../../../assets/images/splash_char.png'),
@@ -22,6 +28,7 @@ export const Images = {
 };
 
 export const NavigationKeys = {
+  Auth: 'Auth',
   SPLASH: 'splash',
   TUTORIAL: 'tutorial',
   LOGIN: 'login',
@@ -30,5 +37,7 @@ export const NavigationKeys = {
   ON_BOARDING1: 'onboarding1',
   ON_BOARDING2: 'onboarding2',
   ON_BOARDING3: 'onboarding3',
-  DASHBOARD: 'DashboardTabs',
+  DASHBOARD: 'Dashboard',
+  HOME_STACK: 'HomeStack',
+  HOME: 'home',
 };
