@@ -1303,19 +1303,29 @@
   resolved "https://registry.yarnpkg.com/@react-native-community/eslint-plugin/-/eslint-plugin-1.2.0.tgz#7d6d789ae8edf73dc9bed1246cd48277edea8066"
   integrity sha512-o6aam+0Ug1xGK3ABYmBm0B1YuEKfM/5kaoZO0eHbZwSpw9UzDX4G5y4Nx/K20FHqUmJHkZmLvOUFYwN4N+HqKA==
 
-"@react-native-firebase/app@^16.1.1":
-  version "16.1.1"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-16.1.1.tgz#4907b2691fc24492e784545d58784b1acf3a3bd5"
-  integrity sha512-7bdUR+dSo6/HA0ilKOZLy1djecgyfRnFSV0tQi1qnD8xW/lBAjMif4idO5frsL5yLC0iefFYOzkVywmFmASqJg==
+"@react-native-firebase/app@^15.3.0":
+  version "15.7.1"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/app/-/app-15.7.1.tgz#38dcd32ee558b73264b23bb917c335207f47d928"
+  integrity sha512-azC2kWvaAfg04G/LURdDBq4L9IvrMLxSx7pcoMT4T2dW9r8RmnSZeD7LhtL4OAuNPZogSrE+ZQaPmi5VmkLqZQ==
   dependencies:
     "@expo/config-plugins" "^5.0.1"
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
-"@react-native-firebase/auth@^16.1.1":
-  version "16.1.1"
-  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-16.1.1.tgz#63dd688ba388fabf2c8185d9e723db56703b3fbb"
-  integrity sha512-PZVIUOQf+vqh+cyLZkqmrfKHEV17QHSGfgpiLIsgdsF46gi0DBg1kIzXbvFoS18Nhr/trRkw2hzsXbBBqll0Qw==
+"@react-native-firebase/auth@^15.3.0":
+  version "15.7.1"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-15.7.1.tgz#6bfc3be0f1bc3503382593a9c9dbd08b4e21e07e"
+  integrity sha512-KtxVcoIpZX5aT0rNaHWo733dP8cCZUBNV90FboapyvasQ5qZdMu+xS2yYe8FdimUlMlzGhMmLyXTxghGmVIZjw==
+
+"@react-native-firebase/database@^16.4.2":
+  version "16.4.2"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/database/-/database-16.4.2.tgz#5131a3919d9113cb1af81dac9324d68a9dbe60e5"
+  integrity sha512-9wKTa3S9QJDz/jhG4afN9P4hcOSDpmJ0mpP2HUJGLCikc+GH7HNJ2pOgxgd6VkP1zG6A3qhSf0zPJjKm2aWmsQ==
+
+"@react-native-firebase/firestore@^15.4.0":
+  version "15.7.1"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/firestore/-/firestore-15.7.1.tgz#5ad80f89fb26d89dc12250542775c0b58d60a2c4"
+  integrity sha512-TEEGOA0kSND/uuPXasLhVDyv656hH3LYCWWbd2NnrmMbcEn84/Q+8DKcaNGHvGcgYjo3KPhvNFjAnYMY/5J9UQ==
 
 "@react-native-masked-view/masked-view@^0.2.8":
   version "0.2.8"

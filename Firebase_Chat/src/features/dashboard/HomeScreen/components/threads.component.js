@@ -48,7 +48,7 @@ function ThreadsComponent({item}) {
       </ImageContainer>
       <Spacer position="right" size="large" />
       <View>
-        <Title>Mike Montano</Title>
+        <Title>{item.name}</Title>
         <LastMessage>She is so cute...!</LastMessage>
       </View>
     </MainContainer>
